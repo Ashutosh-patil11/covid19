@@ -1,0 +1,40 @@
+.border-dark[src='']
+{
+    visibility: hidden;
+}
+.badge
+{
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear; 
+    background-color: red;
+    color: white;
+}
+@keyframes example {
+    0%   {background-color: red;}
+    25%  {background-color: yellow; color: black;}
+    75%  {background-color: magenta;}
+    50%  {background-color: blue; color: black;}
+    100% {background-color: green;}
+  }
+
+  .unity img
+    {
+        animation: gocorona 3s linear infinite;
+    }
+
+    @keyframes gocorona 
+    {
+        0% {
+            transform: scale(1,1);
+        }
+        50% {
+            transform: scale(1.2,1.2);
+        }
+        100% {
+            transform: scale(1,1);
+        }
+    }
+    

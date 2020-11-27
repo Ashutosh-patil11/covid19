@@ -1,0 +1,17 @@
+.footer {
+    clear: both;
+    position: relative;
+    padding: 20px;
+    bottom:0;
+    width:100%;
+  /* Height of the footer */
+    background: black;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+ }
+.footer a
+{
+    text-decoration: none;
+    color: teal;
+}

@@ -1,0 +1,37 @@
+<div class="text-center mt-2"> 
+    <h1  style="color: navy; font-family:'Times New Roman', Times, serif;font-weight: bolder;">All Countries Corona Virus Cases</h1>
+   </div>
+   <p class="text-center text-muted font-weight-bold font-italic">Data is Updated in every 10 minutes</p>
+   <p class="text-center"><span class="badge">Live</span></p>
+
+   <div class="mx-auto justify-content-center d-flex worldmap">
+       <img src="../../assets/world-map-12284.png" alt="" width="450" height="400" />
+   </div>
+
+<div class="text-center mt-5">
+    <p>This Table Only Shows Total Confirmed Cases , if you want to check detail information! Please go on <span class="text-info font-weight-bold">Country </span>tab</p>
+</div>
+
+<table class="table  justify-content-center" style="overflow-x:auto;">
+    <thead class="thead-light">
+      <tr>
+        <th scope="col">Flag</th>
+        <th scope="col" class="text-center font-weight-bold">Country</th>
+        <th scope="col" class="font-weight-bold">Cases</th>
+        <th scope="col" class="font-weight-bold">Deaths</th>
+        <th scope="col" class="font-weight-bold">Recoverd</th>
+        <th scope="col" class="font-weight-bold">Critical</th>
+      </tr>
+    </thead>
+    <tbody *ngFor = "let countr of  countries"> 
+      <tr>
+        <th scope="row"><img src="{{countr.countryInfo.flag}}" alt="" height="30" width="30" style="border: 1px solid black;"></th>
+        <td class="text-center font-weight-bold">{{ countr.country }}</td>
+        <td class="bg-warning text-dark font-weight-bold">{{ countr.cases }}</td>
+        <td class="bg-secondary text-white font-weight-bold">{{ countr.deaths }}</td>
+        <td class="bg-success text-white font-weight-bold">{{ countr.recovered }}</td>
+        <td class="bg-danger text-white font-weight-bold">{{ countr.critical }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <app-footer></app-footer>

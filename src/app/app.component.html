@@ -1,0 +1,24 @@
+<nav class="navbar navbar-dark bg-dark  justify-content-center">
+  <a class="navbar-brand">
+      <img src="../../assets/corona.webp" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">&nbsp;
+   <span class="font-weight-bold text-danger">Covid</span> <span class="font-weight-bold"> 19  </span><span class="font-weight-bold text-info font-italic">Tracker</span>
+  </a>
+</nav>
+<div class="card text-center">
+  <div class="card-header">
+    <ul class="nav nav-tabs card-header-tabs">
+      <li class="nav-item">
+        <a class="nav-link active" routerLink="/world" routerLinkActive="active" 
+        [routerLinkActiveOptions] = {exact:true} >World</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/countries" routerLinkActive="active" [routerLinkActiveOptions] = {exact:true}>Country</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/allcountries" routerLinkActive="active" [routerLinkActiveOptions] = {exact:true}>All Countries</a>
+      </li>
+    </ul>
+  </div>
+</div>
+<router-outlet></router-outlet>
+

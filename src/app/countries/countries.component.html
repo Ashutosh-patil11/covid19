@@ -1,0 +1,159 @@
+<div class="container text-center mt-2">
+<h1 style="color: navy; font-family:'Times New Roman', Times, serif;font-weight: bolder;">Country Wise Covid 19 Tracker</h1>
+</div>
+<p class="text-center text-muted font-weight-bold font-italic">Data is Updated in every 10 minutes</p>
+
+<div class=" justify-content-center d-flex mt-5">
+<div class="form-group">
+  <select (change)="getCountry($event.target.value)" class="form-control " id="exampleFormControlSelect1" >
+    <option disabled selected>
+        Choose A Country
+    </option>
+    <option *ngFor="let country of countries" value={{country.country}} >
+      {{country.country}}
+    </option>
+  </select>
+</div>
+</div>
+
+<div class="justify-content-center d-flex">
+  <button (click)="getCoronaData()" type="button" class="btn btn-primary">Track Covid 19</button>
+</div>
+<h4 *ngIf ="!isDisplay" class="text-center text-danger mt-5">Let's Fight Against Corona Virus</h4><br>
+<div *ngIf ="!isDisplay" class="mx-auto justify-content-center d-flex unity">
+  <img src="../../assets/unity.png" alt="" width="300" height="300" class="rounded"/>
+</div>
+<div class="justify-content-center d-flex mt-5">
+  <img src="{{ imgUrl }}" class="border border-dark" />
+</div>
+ <div class="text-center">
+  <h3 class="text-center font-weight-bold">{{ Country }}</h3>
+ </div>
+ <p class="text-center font-italic">{{ khand }}</p>
+ <p *ngIf = "isDisplay" class="text-center font-italic">Country Population: {{ popu }}</p>
+
+
+ <div *ngIf = "isDisplay" class="justify-content-center d-flex">
+  <div class="card border-secondary mb-3" style="max-width: 18rem; width: 20rem;">
+    <div class="card-header text-center font-weight-bold">Total Cases:</div>
+    <div class="card-body text-secondary">
+      <h6 class="card-title text-center font-weight-bold">{{ Confirmed }}</h6>
+    </div>
+  </div>
+  <div class="card border-danger mb-3" style="max-width: 18rem; width: 20rem">
+    <div class="card-header text-center font-weight-bold">Total Deaths:</div>
+    <div class="card-body text-danger">
+      <h6 class="card-title text-center font-weight-bold">{{ Deaths }}</h6>
+    </div>
+  </div>
+  <div class="card border-success mb-3" style="max-width: 18rem; width: 20rem">
+    <div class="card-header text-center font-weight-bold">Total Recoverd</div>
+    <div class="card-body text-success">
+      <h6 class="card-title text-center font-weight-bold">{{ Recovered }}</h6>
+    </div>
+  </div>
+ </div>
+
+ <div *ngIf = "isDisplay" class="justify-content-center d-flex">
+  <div class="card border-warning mb-3" style="max-width: 18rem; width: 20rem;">
+    <div class="card-header text-center font-weight-bold">Active :</div>
+    <div class="card-body text-warning">
+      <h6 class="card-title text-center font-weight-bold">{{ Active }}</h6>
+    </div>
+  </div>
+  <div class="card mb-3" style="max-width: 18rem; width: 20rem; border: 1px solid rgb(226, 15, 233);">
+    <div class="card-header text-center font-weight-bold">Critical:</div>
+    <div class="card-body ">
+      <h6 class="card-title text-center font-weight-bold" style="color: rgba(226, 15, 233);">{{ Critical }}</h6>
+    </div>
+  </div>
+  <div class="card border-primary  mb-3" style="max-width: 18rem; width: 20rem">
+    <div class="card-header text-center font-weight-bold">Tests:</div>
+    <div class="card-body text-primary ">
+      <h6 class="card-title text-center font-weight-bold">{{ Tests }}</h6>
+    </div>
+  </div>
+ </div>
+
+<div *ngIf = "isDisplay" class="text-center mt-5">
+  <h4 style="color: navy;">Today Corona Virus Cases in {{ Country }}:</h4><p><span class="badge ">Live</span></p>
+</div>
+
+<div *ngIf = "isDisplay" class="row mx-auto text-center">
+  <div class="col-lg">
+   <h5 class="font-weight-bold" style="color: maroon;">Today Cases:</h5>
+   <h6 class="font-weight-bold">{{ Todaycases }}</h6>
+  </div>
+  <div class="col-lg">
+    <h5 class="font-weight-bold" style="color: maroon;">Today Deaths:</h5>
+    <h6 class="font-weight-bold">{{ Todaydeaths }}</h6>
+  </div>
+  <div class="col-lg">
+    <h5 class="font-weight-bold" style="color: maroon;">Today Recoverd:</h5>
+    <h6 class="font-weight-bold">{{ Todayrecoverd }}</h6>
+  </div>
+</div>
+<div *ngIf = "isDisplay" style="width: 50%;" class="mx-auto">
+  <hr>
+</div>
+<div *ngIf = "isDisplay" class="text-center mt-5">
+  <h4 style="color: navy;">Analysis Per Capita:</h4><p><span class="badge ">Live</span></p>
+</div>
+
+<div *ngIf = "isDisplay" class="row mx-auto text-center">
+  <div class="col-lg">
+   <h5 class="font-weight-bold" style="color: maroon;">One Case Per Peoples:</h5>
+   <h6 class="font-weight-bold">{{ Onecase }}</h6>
+  </div>
+  <div class="col-lg">
+    <h5 class="font-weight-bold" style="color: maroon;">One Death Per Peoples:</h5>
+    <h6 class="font-weight-bold">{{ Onedeath }}</h6>
+  </div>
+  <div class="col-lg">
+    <h5 class="font-weight-bold" style="color: maroon;">One Test Per Peoples:</h5>
+    <h6 class="font-weight-bold">{{ Onetest }}</h6>
+  </div>
+</div>
+
+<div *ngIf = "isDisplay" style="width: 50%;" class="mx-auto">
+  <hr>
+</div>
+<div *ngIf = "isDisplay" class="text-center mt-5">
+  <h4 style="color: navy;">Analysis Per One Million:</h4><p><span class="badge ">Live</span></p>
+</div>
+<div *ngIf = "isDisplay" class="row mx-auto text-center">
+  <div class="col-lg">
+   <h5 class="font-weight-bold" style="color: maroon;">Tests per one million:</h5>
+   <h6 class="font-weight-bold">{{ Milliontests }}</h6>
+  </div>
+  <div class="col-lg">
+    <h5 class="font-weight-bold" style="color: maroon;">Cases per one million:</h5>
+    <h6 class="font-weight-bold">{{ Millioncases }}</h6>
+  </div>
+  <div class="col-lg">
+    <h5 class="font-weight-bold" style="color: maroon;">Deaths per one million:</h5>
+    <h6 class="font-weight-bold">{{ Milliondeaths }}</h6>
+  </div>
+</div><br>
+<div *ngIf = "isDisplay" class="row mx-auto text-center">
+  <div class="col-lg">
+   <h5 class="font-weight-bold" style="color: maroon;">Active per one million:</h5>
+   <h6 class="font-weight-bold">{{ Millionactive }}</h6>
+  </div>
+  <div class="col-lg">
+    <h5 class="font-weight-bold" style="color: maroon;">Recovered per one million:</h5>
+    <h6 class="font-weight-bold">{{ Millionrecoverd }}</h6>
+  </div>
+  <div class="col-lg">
+    <h5 class="font-weight-bold" style="color: maroon;">Critical per one million:</h5>
+    <h6 class="font-weight-bold">{{ Millioncritical }}</h6>
+  </div>
+</div>
+<app-footer ></app-footer>
+
+
+
+
+
+
+

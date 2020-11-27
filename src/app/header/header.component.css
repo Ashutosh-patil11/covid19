@@ -1,0 +1,27 @@
+.badge
+{
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear; 
+    background-color: red;
+    color: white;
+}
+@keyframes example {
+    0%   {background-color: red;}
+    25%  {background-color: yellow; color: black;}
+    75%  {background-color: magenta;}
+    50%  {background-color: blue; color: black;}
+    100% {background-color: green;}
+  }
+
+  .image img {
+    position: absolute;
+    -webkit-animation:spin 4s linear infinite;
+    -moz-animation:spin 4s linear infinite;
+    animation:spin 4s linear infinite;
+}
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }

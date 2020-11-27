@@ -1,0 +1,156 @@
+<div class="text-center mt-2"> 
+ <h1  style="color: navy; font-family:'Times New Roman', Times, serif;font-weight: bolder;">World Covid Tracker</h1>
+</div>
+<p class="text-center text-muted font-weight-bold font-italic ">Data is Updated in every 10 minutes</p>
+<div class="mx-auto justify-content-center d-flex image mt-5">
+  <img src="../../assets/logo.jpg" alt="" width="220" height="200" class="rounded"/>
+</div><br><br><br><br><br><br><br><br>
+<div class="d-flex justify-content-center mt-5">
+  <h2 class=" text-center" style="font-weight: bolder;">World Cases</h2><p><span class="badge ">Live</span></p>
+</div>
+<div class="justify-content-center d-flex">
+    <div class="card mb-3" style="max-width: 18rem;width: 20rem;">
+      <div class="card-header text-white bg-primary font-weight-bold">Total Cases:</div>
+      <div class="card-body">
+        <h6 class="card-title text-center text-primary font-weight-bold">{{TotalConfirmed}} </h6>
+        <i class="fas fa-bed justify-content-center d-flex text-primary" style='font-size:36px;'></i>
+      </div>
+    </div>
+      <div class="card mb-3" style="max-width: 18rem; width: 20rem;">
+        <div class="card-header text-white font-weight-bold" style="background-color: red;">Total Deaths:</div>
+        <div class="card-body">
+          <h6 class="card-title text-center text-danger font-weight-bold">{{TotalDeaths}} </h6>
+          <i class='fas fa-heartbeat justify-content-center d-flex' style='font-size:36px; color:red;'></i>
+        </div>
+      </div>
+        <div class="card  mb-3" style="max-width: 18rem; width: 20rem;">
+          <div class="card-header font-weight-bold text-white bg-success">Total Recoverd:</div>
+          <div class="card-body">
+            <h6 class="card-title text-center text-success font-weight-bold">{{TotalRecovered}} </h6>
+            <i class='fas fa-pump-medical justify-content-center d-flex' style='font-size:36px; color:green;'></i>
+          </div>
+        </div>
+</div>
+<div class="justify-content-center d-flex">
+  <div class="card mb-3" style="max-width: 18rem;width: 20rem;">
+    <div class="card-header text-white font-weight-bold" style="background-color: olive;">Total Active:</div>
+    <div class="card-body">
+      <h6 class="card-title text-center font-weight-bold" style="color:olive">{{TotalActive}} </h6>
+      <i class="fas fa-hand-holding-medical justify-content-center d-flex" style='font-size:36px; color:olive;'></i>
+    </div>
+  </div>
+    <div class="card mb-3" style="max-width: 18rem; width: 20rem;">
+      <div class="card-header text-white font-weight-bold" style="background-color: saddlebrown;">Total Critical:</div>
+      <div class="card-body">
+        <h6 class="card-title text-center font-weight-bold" style="color:saddlebrown">{{TotalCritical}} </h6>
+        <i class='far fa-flushed justify-content-center d-flex' style='font-size:36px; color:saddlebrown;'></i>
+      </div>
+    </div>
+      <div class="card  mb-3" style="max-width: 18rem; width: 20rem;">
+        <div class="card-header font-weight-bold text-white " style="background-color: darkslategrey;">Total Tests:</div>
+        <div class="card-body">
+          <h6 class="card-title text-center font-weight-bold" style="color:darkslategrey">{{TotalTests}} </h6>
+          <i class='fas fa-thermometer-half justify-content-center d-flex' style='font-size:36px; color:darkslategrey;'></i>
+        </div>
+      </div>
+</div>
+
+<div class="d-flex justify-content-center mt-5">
+  <h2 class=" text-center"  style="font-weight: bolder;">Todays Counts</h2><p><span class="badge ">Live</span></p>
+</div>
+<div class="justify-content-center d-flex">
+  <div class="card mb-3" style="max-width: 18rem;width: 20rem;">
+    <div class="card-header text-white font-weight-bold" style="background-color: darkslateblue;">Today Cases:</div>
+    <div class="card-body">
+      <h6 class="card-title text-center font-weight-bold" style="color:darkslateblue">{{TodaysCases}} </h6>
+      <i class="fas fa-head-side-cough justify-content-center d-flex" style='font-size:36px; color:darkslateblue;'></i>
+    </div>
+  </div>
+    <div class="card mb-3" style="max-width: 18rem; width: 20rem;">
+      <div class="card-header text-white font-weight-bold" style="background-color:chocolate;">Today Deaths:</div>
+      <div class="card-body">
+        <h6 class="card-title text-center font-weight-bold" style="color:chocolate">{{TodayDeath}} </h6>
+        <i class='fas fa-ban justify-content-center d-flex' style='font-size:36px; color:chocolate;'></i>
+      </div>
+    </div>
+      <div class="card  mb-3" style="max-width: 18rem; width: 20rem;">
+        <div class="card-header font-weight-bold text-white " style="background-color:maroon;">Today Recoverd:</div>
+        <div class="card-body">
+          <h6 class="card-title text-center font-weight-bold" style="color:maroon">{{TodayRecovered}} </h6>
+          <i class='fas fa-capsules justify-content-center d-flex' style='font-size:36px; color:maroon;'></i>
+        </div>
+      </div>
+</div>
+
+<div class="d-flex justify-content-center mt-5">
+  <h2 class=" text-center"  style="font-weight: bolder;">Analysis</h2><p><span class="badge ">Live</span></p>
+</div>
+<div class="justify-content-center d-flex">
+  <div class="card mb-3" style="max-width: 18rem;width: 20rem;">
+    <div class="card-header text-white  font-weight-bold" style="background-color: steelblue;">Cases Per one Million:</div>
+    <div class="card-body">
+      <h6 class="card-title text-center font-weight-bold" style="color:steelblue">{{Casespermillion}} </h6>
+      <i class="fas fa-users justify-content-center d-flex" style='font-size:36px; color:steelblue;'></i>
+    </div>
+  </div>
+    <div class="card mb-3" style="max-width: 18rem; width: 20rem;">
+      <div class="card-header text-white font-weight-bold" style="background-color: steelblue;">Deaths Per One Million:</div>
+      <div class="card-body">
+        <h6 class="card-title text-center font-weight-bold" style="color:steelblue">{{Deathspermillion}} </h6>
+        <i class='fas fa-user-times justify-content-center d-flex' style='font-size:36px; color:steelblue;'></i>
+      </div>
+    </div>
+      <div class="card  mb-3" style="max-width: 18rem; width: 20rem;">
+        <div class="card-header font-weight-bold text-white " style="background-color: steelblue;">Recoverd Per One Million:</div>
+        <div class="card-body">
+          <h6 class="card-title text-center font-weight-bold" style="color:steelblue">{{Recoverdpermillion}} </h6>
+          <i class='fas fa-user-check justify-content-center d-flex' style='font-size:36px; color:steelblue;'></i>
+        </div>
+      </div>
+</div>
+<div class="justify-content-center d-flex">
+  <div class="card mb-3" style="max-width: 18rem;width: 20rem;">
+    <div class="card-header text-white font-weight-bold font-weight-bold" style="background-color: steelblue;">Active Per One Million:</div>
+    <div class="card-body">
+      <h6 class="card-title text-center" style="color:steelblue">{{Activepermillion}} </h6>
+      <i class="fas fa-user-lock justify-content-center d-flex" style='font-size:36px; color:steelblue;'></i>
+    </div>
+  </div>
+    <div class="card mb-3" style="max-width: 18rem; width: 20rem;">
+      <div class="card-header text-white  font-weight-bold font-weight-bold" style="background-color: steelblue;">Critical Per One Million:</div>
+      <div class="card-body">
+        <h6 class="card-title text-center " style="color:steelblue">{{Criticalpermillion}} </h6>
+        <i class='fas fa-user-minus justify-content-center d-flex' style='font-size:36px; color:steelblue;'></i>
+      </div>
+    </div>
+      <div class="card  mb-3" style="max-width: 18rem; width: 20rem;">
+        <div class="card-header font-weight-bold text-white  font-weight-bold" style="background-color: steelblue;">Tests Per One Million</div>
+        <div class="card-body">
+          <h6 class="card-title text-center" style="color:steelblue">{{Testspermillion}} </h6>
+          <i class='fas fa-user-shield justify-content-center d-flex' style='font-size:36px; color:steelblue;'></i>
+        </div>
+      </div>
+</div>
+<div class="justify-content-center d-flex">
+    <div class="card mb-3" style="max-width: 18rem; width: 20rem;">
+      <div class="card-header text-white font-weight-bold" style="background-color: steelblue;">Affected Countries:</div>
+      <div class="card-body">
+        <h6 class="card-title text-center " style="color:steelblue">{{AffectedCountry}} </h6>
+        <i class='fas fa-globe justify-content-center d-flex' style='font-size:36px; color:steelblue;'></i>
+      </div>
+    </div>
+</div>
+<br>
+<div class="justify-content-center d-flex mt-5">
+  <div class="card mb-3" style="max-width: 18rem; width: 20rem;">
+    <div class="card-header text-black font-weight-bold" style="background-color: orange;">World Population:</div>
+    <div class="card-body">
+      <h6 class="card-title text-center font-weight-bold" style="color:orange"> {{WorldPopulation}} </h6>
+      <i class='fas fa-globe-americas justify-content-center d-flex' style='font-size:36px; color:red;'></i>
+    </div>
+  </div>
+</div>
+<app-footer ></app-footer>
+
+
+  

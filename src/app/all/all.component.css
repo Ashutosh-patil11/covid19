@@ -1,0 +1,58 @@
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 8px;
+  }
+  tr:nth-child(even){background-color: #f2f2f2}
+  .badge
+  {
+      animation-name: example;
+      animation-duration: 4s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+      animation-timing-function: linear; 
+      background-color: red;
+      color: white;
+  }
+  @keyframes example {
+      0%   {background-color: red;}
+      25%  {background-color: yellow; color: black;}
+      75%  {background-color: magenta;}
+      50%  {background-color: blue; color: black;}
+      100% {background-color: green;}
+    }
+
+    .worldmap img
+    {
+        animation: gocorona 3s linear infinite;
+    }
+
+    @keyframes gocorona 
+    {
+        0%
+        {
+            transform: scale(0.75);
+        }
+        20%
+        {
+            transform: scale(1);
+        }
+        40%
+        {
+            transform: scale(o.75);
+        }
+        60%
+        {
+            transform: scale(1);
+        }
+        80%
+        {
+            transform: scale(0.75);
+        }
+    }
